@@ -1,34 +1,11 @@
-banco de dados 
--- Data: 04/08/26
--- Lista de Exercícios 4 
-
--- Exercício Teste
-
-CREATE TABLE `departamento` (
-    `id` INT PRIMARY KEY,
-    `nome` VARCHAR(255);
-
-CREATE TABLE `departamento` (
-    `id` INT,
-    `nome` VARCHAR (255),
-    CONSTRAINT `departamento_pk` PRIMARY KEY (`id`)
-);
-    
-CREATE TABLE `empregado`(
-    `id` INT PRIMARY KEY,
-    `nome` VARCHAR(255),
-    `id_depto` INT,
-    FOREIGN KEY (`id_depto`) REFERENCES `departamento` (`id`));
-
-
--- Exercìcio 01 
+-- Exercício 01 
 
 CREATE DATABASE `sistemaContato`;
 
 CREATE TABLE `grupo` (
     `id` INT PRIMARY KEY,
     `nome` VARCHAR (255),
-    `grauImportancia` INT
+    `grauImportancia` CHAR(1)
     );
 
 CREATE TABLE `contato`(
@@ -38,11 +15,11 @@ CREATE TABLE `contato`(
     `endereco` VARCHAR (255),
     `email` VARCHAR (255),
     `idGrupo` INT,
-    FOREIGN KEY (idGrupo) REFERENCES `grupo` (`id`));
+    FOREIGN KEY (`idGrupo`) REFERENCES `grupo` (`id`));
 
 CREATE TABLE `telefone` (
     `id` INT PRIMARY KEY,
     `rotulo` VARCHAR (255),
-    `numero` INT,
+    `numero` VARCHAR(255),
     `idContato` INT, 
-    FOREIGN KEY (idContato) REFERENCES `contato` (`id`));
+    FOREIGN KEY (`idContato`) REFERENCES `contato` (`id`));

@@ -1,4 +1,8 @@
+-- Exercício 02
+
 CREATE DATABASE `gravadora`;
+
+USE `gravadora`;
 
 CREATE TABLE `cantor` (
     `id` INT PRIMARY KEY,
@@ -16,19 +20,20 @@ CREATE TABLE `gravacao` (
     `duracao` INT,
     `idCantor` INT,
     `idMusica` INT,
-    FOREIGN KEY (`idCantor`) REFERENCES `cantor` (`id`)
+    FOREIGN KEY (`idCantor`) REFERENCES `cantor` (`id`),
     FOREIGN KEY (`idMusica`) REFERENCES `musica`(`id`)
 );
 
 CREATE TABLE `compositor` (
-    `cpf` VARCHAR (14) PRIMARY KEY,
+    `id` INT PRIMARY KEY,
     `nome` VARCHAR (255)
 );
 
 CREATE TABLE `musicaCompositor` (
-    `cpfCompositor` INT,
+    `idCompositor` INT,
     `idMusica` INT,
-    FOREIGN KEY (`cpfCompositor`) REFERENCES `compositor` (`cpf`)
+    PRIMARY KEY (`idCompositor`, `idMusica`),
+    FOREIGN KEY (`cpfCompositor`) REFERENCES `compositor` (`cpf`),
     FOREIGN KEY (`idMusica`) REFERENCES `musica` (`id`)
 );
 
