@@ -37,11 +37,6 @@ ALTER TABLE `projEmp`
 ADD CONSTRAINT FOREIGN KEY (`codProj`) REFERENCES `projeto`(`codProj`);
 
 
-
-
-
-
-
 -- Exercício 01 
 USE `empresa`;
 
@@ -125,7 +120,26 @@ VALUES('Site Institucional', 'Página para empresa local', '5000.00', '2025-11-0
 
 USE `empresa`;
 
-INSERT INTO `projEmp`
+INSERT INTO `projEmp` (`codProj`, `cpfEmpregado`, `hrTrab`)
+VALUES('03', '666.666.666-66', '50')
+
+-- Exercício 14
+
+USE `empresa`;
+
+INSERT INTO `cliente` (`cpf`, `nome`, `telefone`)
+
+VALUES('777.777.777-77', 'Fernanda Lima', '48991231231')
+
+-- Exercício 15 
+
+USE `empresa`;
+
+INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`, `cpfGerente`, `cpfClientes`)
+VALUES('Controle de Estoque', 'Sistema para loja de roupas', '8000.00', '2025-12-20', '2025-12-05', '2025-09-25', '444.444.444-44', '777.777.777-77')
+
+
+
 
 
 
