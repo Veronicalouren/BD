@@ -68,18 +68,64 @@ VALUES ('Ana Souza', '444.444.444-44', 'Gerente de Projetos');
 
 -- Exercício 05
 
- USE `empresa`; 
+USE `empresa`; 
+INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`, `cpfGerente`, `cpfCliente`)
+VALUES ('Sistemas de Vendas', 'Plataforma para e-commerce', '15000.00', '2025-12-01', '2025-11-15', '2025-09-10', '444.444.444-44', '111.111.111-11'); 
 
- INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`, `cpfGerente`, `cpfCliente`)
- VALUES ('Sistemas de Vendas', 'Plataforma para e-commerce', '15000.00', '2025-12-01', '2025-11-15', '2025-09-10', '444.444.444-44', '111.111.111-11'); 
+-- Exercício 06
 
- -- Exercício 06
+USE `empresa`;
 
- USE `empresa`;
+INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`, `cpfGerente`, `cpfCliente`)
+VALUES('Aplicativo financeiro', 'Gestão de depesas pessoais', '12000.00', '2025-10-30', '2025-10-20', '2025-09-12', '444.444.444-44', '222.222.222-22')
 
- INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`)
+-- Exercício 07
 
+USE `empresa`; 
 
+INSERT INTO `projEmp` (`codProj`, `cpfEmpregado`, `hrTrab`)
+VALUES('01', '333.333.333-33', '40')
+
+-- Exercício 08
+
+USE `empresa`;
+
+INSERT INTO `projEmp` (`codProj`, `cpfEmpregado`, `hrTrab`)
+VALUES('01', '444.444.444-44', '20')
+
+-- Exercício 09 
+
+USE `empresa`; 
+
+INSERT INTO `projEmp` (`codProj`, `cpfEmpregado`, `hrTrab`)
+VALUES('02', '333.333.333-33', '35')
+
+-- Exercício 10 
+
+USE `empresa`; 
+
+INSERT INTO `cliente` (`nome`, `cpf`, `telefone`)
+VALUES('Pedro Gomes', '555.555.555-55', '48999887766')
+
+-- Exercício 11
+
+USE `empresa`;
+
+INSERT INTO `empregado` (`nome`, `cpf`, `cargo`)
+VALUES('Lucas Andrade', '666.666.666-66', 'Desenvolvedor Backend')
+
+-- Exercício 12
+
+USE `empresa`;
+
+INSERT INTO `projeto` (`nome`, `descricao`, `preco`, `dtFim`, `dtEstimada`, `dtSolicitacao`, `cpfGerente`, `cpfCliente`)
+VALUES('Site Institucional', 'Página para empresa local', '5000.00', '2025-11-01', '2025-10-25', '2025-09-20', '444.444.444-44', '555.555.555-55')
+
+-- Exercício 13
+
+USE `empresa`;
+
+INSERT INTO `projEmp`
 
 
 
