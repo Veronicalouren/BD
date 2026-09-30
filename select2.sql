@@ -152,44 +152,32 @@ FROM `Animais` ORDER BY `especie` ASC, `nome` ASC;
 
 -- Exercício 13 
 SELECT *
-FROM `Animais`
-ORDER BY `idAnimal` ASC
-LIMIT 5;
+FROM `Animais` ORDER BY `idAnimal` ASC LIMIT 5;
 
 -- Exercício 14
 SELECT *
-FROM Consultas
-ORDER BY idConsulta ASC
-LIMIT 3;
+FROM Consultas ORDER BY idConsulta ASC LIMIT 3;
 
 -- Exercício 15 
 SELECT *
-FROM Tutores
-ORDER BY idTutor ASC
-LIMIT 2;
+FROM Tutores ORDER BY idTutor ASC LIMIT 2;
 
 -- Exercício 16 
 SELECT *
-FROM Tutores
-ORDER BY idTutor ASC
-LIMIT 2, 2;
+FROM Tutores ORDER BY idTutor ASC LIMIT 2, 2;
 
 -- Exercício 17
 SELECT
 nome AS 'Animal Mais Pesado',
 peso_kg AS 'Peso (kg)'
-FROM Animais
-ORDER BY peso_kg DESC
-LIMIT 1;
+FROM Animais ORDER BY peso_kg DESC LIMIT 1;
 
 -- Exercício 18 
 SELECT
 motivo AS 'Motivo',
 diagnostico AS 'Diagnóstico',
 custo AS 'Valor'
-FROM Consultas
-ORDER BY custo DESC
-LIMIT 1;
+FROM Consultas ORDER BY custo DESC LIMIT 1;
 
 
 -- Exercício 19 
@@ -197,51 +185,13 @@ SELECT
 `nome` AS 'Nome',
 `especie` AS 'Espécie',
 `dtNascimento` AS 'Nascimento'
-FROM Animais
-ORDER BY dtNascimento DESC
-LIMIT 3;
+FROM Animais ORDER BY dtNascimento DESC LIMIT 3;
 
 -- Exercício 20 
 SELECT
 dtConsulta AS 'Data',
 motivo AS 'Motivo'
-FROM Consultas
-ORDER BY dtConsulta ASC
-LIMIT 2;
+FROM Consultas ORDER BY dtConsulta ASC LIMIT 2;
 
 
-
-
-SELECT 
-    `nome` AS 'Nome do Produto',
-    `fabricante` AS 'Marca',
-    `dtCadastro` AS 'Data de Cadastro'
-FROM `produtos`;
-
-
--- Ordem alfabética (A-Z ou 0-9)
--- Listar os produtos em ordem alfabética
-SELECT `nome`, `preco`
-FROM `produtos` ORDER BY `nome` ASC; 
-
--- Ordenar pelo preço (alto --> baixo)
-SELECT
-    `nome` AS 'Nome',
-    `preco` AS 'Preço'
-FROM `produtos` ORDER BY `preco` DESC; 
-
--- Top 5 produtos mais caros 
-SELECT `nome`, `preco`
-FROM `prodtutos` ORDER BY `preco` LIMIT 5;
-
--- Paginação 
--- Página 1 
-SELECT `idProduto`, `nome`, `preco`
-FROM `produtos` LIMIT 0,5;
--- Página 2 
-SELECT `idProduto`, `nome`, `preco`
-FROM `produtos` LIMIT 5,5;
--- Página 3 
-SELECT `idProduto`, `nome`, `preco`
-FROM `produtos` LIMIT 10,5;
 
