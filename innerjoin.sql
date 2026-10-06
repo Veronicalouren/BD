@@ -1,9 +1,3 @@
-exercícios com INNER JOIN (O Básico)
-1 - Listar Produto e Categoria: Mostre o nome de cada produto ao lado do nome da sua respectiva categoria.
-2 - Filtrar por Categoria Específica: Mostre o nome e o preço apenas dos produtos que pertencem à categoria 'Periféricos'.
-3 - Filtrar por Fabricante e Categoria: Mostre o nome e o fabricante apenas dos produtos da categoria 'Notebooks'.
-4 - Listar Produtos com Preço Alto: Mostre o nome do produto, o nome da categoria e o preço dos produtos que custam mais de R$ 2000,00.
-
 /* Roteiro de Aula: Comandos SELECT (Sintaxe MariaDB)
 Banco de Dados: loja_eletronicos
 */
