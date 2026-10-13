@@ -106,18 +106,3 @@ LEFT JOIN categorias
 ON produtos.idCategoria_fk = categorias.idCategoria
 WHERE produtos.idCategoria_fk IS NULL; 
 
--- Exercício 07 
-SELECT 
-    categorias.nome AS Categoria,
-    produtos.nome AS Produto
-FROM categorias
-LEFT JOIN produtos
-ON categorias.idCategoria = produtos.idCategoria_fk;
-
--- Exercício 08 
-SELECT 
-    categorias.nome AS Categoria
-FROM produtos
-RIGHT JOIN categorias
-ON produtos.idCategoria_fk = categorias.idCategoria
-WHERE produtos.idProduto IS NULL;
